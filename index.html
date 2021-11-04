@@ -12,7 +12,11 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    
+
     <link rel="stylesheet" href="./css/style.css" />
+
+    <link href="node_modules/lightbox2/dist/css/lightbox.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="assets/fonts/style.css" />
   </head>
@@ -263,7 +267,7 @@
 
               <div class="grid-item heloisa-chris">
                 <div class="gallery-image">
-                  <img src="./img/portfolio/casal/heloisa-chris/1.jpeg" />
+                  <a href="./img/portfolio/casal/heloisa-chris/1.jpeg" data-lightbox="image-1"><img src="./img/portfolio/casal/heloisa-chris/1.jpeg" /></a>
                 </div>
               </div>
               <div class="grid-item heloisa-chris">
@@ -327,12 +331,16 @@
 
 <div class='grid-item cover gestante rebecca'><div class='gallery-image'><img src='./img/portfolio/gestante/rebecca/1.jpeg' alt=''/><div class='img-overlay'><div class='name-client'><p class='reey'>Rebecca</p></div><div class='button-fltr'><button class='filter-btn' data-filter='.rebecca'>Ver mais deste ensaio</button></div></div></div></div>  
 
-<div class='grid-item rebecca'><div class='gallery-image'><img src='./img/portfolio/gestante/rebecca/1.jpeg'/></div></div>
+<div class='grid-item rebecca'><div class='gallery-image'>
+  <a href="./img/portfolio/gestante/rebecca/1.jpeg" data-lightbox="image-2">
+  <img src='./img/portfolio/gestante/rebecca/1.jpeg'/>
+  </a>
+</div></div>
 <div class='grid-item rebecca'><div class='gallery-image'><img src='./img/portfolio/gestante/rebecca/2.jpeg'/></div></div>
 <div class='grid-item rebecca'><div class='gallery-image'><img src='./img/portfolio/gestante/rebecca/3.jpeg'/></div></div>
 <div class='grid-item rebecca'><div class='gallery-image'><img src='./img/portfolio/gestante/rebecca/4.jpeg'/></div></div>
 <div class='grid-item rebecca'><div class='gallery-image'><img src='./img/portfolio/gestante/rebecca/5.jpeg'/></div></div>
-<div class='grid-item rebecca'><div class='gallery-image'><img src='./img/portfolio/gestante/rebecca/6.jpeg'/></div></div>
+
 
 <div class='grid-item cover infantil pietro'><div class='gallery-image'><img src='./img/portfolio/infantil/pietro/1.jpeg' alt=''/><div class='img-overlay'><div class='name-client'><p class='reey'>Pietro</p></div><div class='button-fltr'><button class='filter-btn' data-filter='.pietro'>Ver mais deste ensaio</button></div></div></div></div>
 
@@ -860,6 +868,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./js/isotope.pkgd.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="node_modules/lightbox2/dist/js/lightbox.js"></script>
     <script src="./js/app.js"></script>
   </body>
 </html>
