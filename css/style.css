@@ -3,20 +3,32 @@
 :root {
   --dark-one: #333;
   --dark-two: #7a7a7a;
-  --main-color: #8d5ba5;
+  --main-color: #daa520;
   --light-one: #fff;
   --light-two: #f9fafb;
   --light-three: #f6f7fb;
 }
 
 @font-face {
-  font-family: reey;
-  src: url(../assets/reey/Reey-Regular.otf);
+  font-family: montel;
+  src: url(../assets/fonts/montel/Montel.otf);
 }
 
+@font-face {
+  font-family: adelia;
+  src: url(../assets/fonts/adelia/adelia.ttf);
+}
 
-.reey {
-  font-family: reey;
+@font-face {
+  font-family: montserrat;
+  src: url(../assets/fonts/montserrat/Montserrat-Regular.otf);
+}
+
+.adelia {
+  font-family: adelia;
+}
+.montel {
+  font-family: montel;
   font-weight: 400;
 }
 
@@ -107,8 +119,15 @@ img {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  top: 0;
-  left: 0;
+
+  background-image: url(../img/back-port.jpg);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  
 }
 
 .overlay .shape {
@@ -167,6 +186,7 @@ img {
   line-height: 1;
   font-size: 2.8rem;
   margin-bottom: 0.6rem;
+  font-family: montel;
 }
 
 .title:before {
@@ -212,7 +232,7 @@ img {
   padding: 0.85rem 2rem;
   background-color: var(--main-color);
   color: var(--light-one);
-  border-radius: 2rem;
+  
   font-size: 1.05rem;
   text-transform: uppercase;
   font-weight: 500;
@@ -220,7 +240,8 @@ img {
 }
 
 .btn:hover {
-  background-color: #6b44e0;
+  background-color: #ffffff;
+  color: var(--dark-one);
 }
 
 .btn.small {
@@ -234,15 +255,16 @@ img {
 
 header {
   width: 100%;
-  background-color: var(--light-three);
+  background: url('../img/wedding.jpg') center / cover;
   overflow: hidden;
-  position: relative;
 }
 
 nav {
   width: 100%;
   position: relative;
   z-index: 50;
+  padding-top: 0;
+  padding-bottom: 16.675%;
 }
 
 nav .container {
@@ -265,7 +287,7 @@ nav .container {
 .links a {
   display: inline-block;
   padding: 0.9rem 1.2rem;
-  color: var(--dark-one);
+  color: var(--light-one);
   font-size: 1.05rem;
   text-transform: uppercase;
   font-weight: 500;
@@ -274,9 +296,9 @@ nav .container {
 }
 
 .links a.active {
-  background-color: var(--main-color);
+  
   color: var(--light-one);
-  border-radius: 2rem;
+  border: 1px solid var(--light-one);
   font-size: 1rem;
   padding: 0.9rem 2.1rem;
   margin-left: 1rem;
@@ -286,9 +308,10 @@ nav .container {
   color: var(--main-color);
 }
 
-.links a.active:hover {
-  color: var(--light-one);
-  background-color: #6b44e0;
+.links a.active:hover, .links a:hover {
+  color: var(--dark-one);
+  background-color: var(--light-one);
+  border: 1px solid var(--dark-one);
 }
 
 .hamburger-menu {
@@ -299,6 +322,7 @@ nav .container {
   display: none;
   align-items: center;
   justify-content: flex-end;
+  
 }
 
 .hamburger-menu .bar {
@@ -306,7 +330,7 @@ nav .container {
   width: 2.1rem;
   height: 3px;
   border-radius: 3px;
-  background-color: var(--dark-one);
+  background-color: var(--light-one);
   transition: 0.5s;
 }
 
@@ -317,7 +341,7 @@ nav .container {
   width: 2.1rem;
   height: 3px;
   border-radius: 3px;
-  background-color: var(--dark-one);
+  background-color: var(--light-one);
   transition: 0.5s;
 }
 
@@ -355,10 +379,56 @@ nav.open .links {
   text-align: left;
 }
 
+.header-content {
+  padding-bottom: 16.675%;
+  display: flex;
+}
+
 .header-title {
   font-size: 3.8rem;
   line-height: 0.8;
-  color: var(--dark-one);
+  color: var(--light-one);
+  text-align: center;
+}
+#header p {
+  font-family: montserrat;
+  color: var(--light-one);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.header-content p {
+  font-family: montserrat;
+  color: var(--light-one);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.header-content p::before, .header-content p::after {
+  background-color: var(--light-one);
+  content: "";
+  display: inline-block;
+  height: 1.5px;
+  position: relative;
+  vertical-align: middle;
+  width: 10%;
+}
+
+.header-content p::before {
+  right: 0.5rem;
+  margin-left: -50%;
+}
+
+.icon-noun_Branch_2316039 {
+  color: var(--light-one);
+  font-size: 8rem;
+  display: table;
+  margin: 0 auto;
+}
+
+.header-content p::after {
+  left: 0.5rem;
+  margin-right: -50%;
 }
 
 .header-content .text {
@@ -448,8 +518,8 @@ header .circle {
 .card {
   position: relative;
   width: 100%;
-  max-width: 390px;
-  min-height: 520px;
+  max-width: 310px;
+
   background-color: var(--light-three);
   display: flex;
   align-items: center;
@@ -458,6 +528,12 @@ header .circle {
   padding: 3rem 2rem;
   overflow: hidden;
   transition: 0.3s;
+}
+
+.card-btn {
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
 }
 
 .card:before {
@@ -493,7 +569,7 @@ header .circle {
 
 .icon {
   font-size: 10rem;
-  color: var(--main-color);
+  color: var(--dark-color);
 }
 
 .grid-4-col.footer-newstletter {
@@ -557,10 +633,8 @@ header .circle {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: var(--main-color);
+  
 }
-
-
 
 .filter-btn {
   border: none;
@@ -574,13 +648,13 @@ header .circle {
   font-size: 1.1rem;
   line-height: 1;
   cursor: pointer;
-  border-radius: 2rem;
+  
   transition: 0.3s;
 }
 
 .filter-btn.active {
-  background-color: var(--light-one);
-  color: var(--main-color);
+  color: var(--light-one);
+  border: 1px solid var(--light-one);
 }
 
 .portfolio .square {
@@ -1001,11 +1075,17 @@ header .circle {
   margin-top: 6rem;
 }
 
+.review-img {
+  width: 90%;
+  margin-right: 2rem;
+}
+
 .reviews {
   overflow: hidden;
 }
 
 .review {
+  display: inline-flex;
   position: relative;
   padding: 2rem 1.5rem;
 }
@@ -1147,8 +1227,8 @@ header .circle {
   height: 67px;
   display: inline-block;
   border-radius: 50%;
-  background-color: var(--main-color);
-  color: var(--light-one);
+  background-color: #E0E0E1;
+  color: white;
   text-align: center;
   font-size: 1.4rem;
   margin-right: 1rem;
@@ -1179,12 +1259,12 @@ header .circle {
 }
 
 .contact-input {
-  padding: 1.2rem 2.1rem;
+  padding: 1rem 1.5rem;
   margin: 0.6rem 0;
-  border: none;
+  
   outline: none;
-  background: #f3f3f3;
-  border-radius: 4rem;
+  
+  border: 1px solid var(--dark-one);
   font-weight: 600;
   font-size: 1.25rem;
   transition: 0.3s;
@@ -1197,7 +1277,7 @@ header .circle {
 .contact-input.textarea {
   resize: none;
   min-height: 280px;
-  border-radius: 2rem;
+ 
 }
 
 .contact-input:hover {
@@ -1210,6 +1290,18 @@ header .circle {
 
 .contact-input .btn {
   margin-top: 0.6rem;
+}
+
+.contact form button {
+  background-color: var(--dark-one);
+  color: var(--light-one);
+  cursor: pointer;
+}
+
+.contact form button:hover {
+  background-color: var(--dark-one);
+  color: var(--light-one);
+
 }
 
 /* End Contact */
@@ -1302,9 +1394,9 @@ header .circle {
   transition: 0.3s;
 }
 
-.input-arrow:hover {
+/* .input-arrow:hover {
   background-color: #6b44e0;
-}
+} */
 
 .focus {
   background: #fff;
@@ -1385,9 +1477,9 @@ header .circle {
   z-index: 2;
 }
 
-.back-btn:hover {
+/* .back-btn:hover {
   background-color: #6b44e0;
-}
+} */
 
 .back-btn-wrap:before {
   content: '';
@@ -1600,7 +1692,6 @@ header .circle {
     max-width: 325px;
   }
 
-
   .img-overlay h3 {
     font-size: 1.1rem;
   }
@@ -1737,6 +1828,9 @@ header .circle {
     font-size: 6.5rem;
   }
 
+  .review {
+    flex-wrap: wrap;
+  }
   .review-nav {
     font-size: 1.55rem;
   }
@@ -1853,8 +1947,11 @@ header .circle {
 }
 
 @media (max-width: 850px) {
-
-
+  .review-img {
+    width: 90%;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
 
   .grid-2 {
     grid-template-columns: 1fr !important;
@@ -1972,9 +2069,8 @@ header .circle {
     width: 50%;
   }
 
-
   .gallery-image {
-    height: 210px; 
+    height: 210px;
     max-width: 270px;
   }
 

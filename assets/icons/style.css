@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?je4sez');
+  src:  url('fonts/icomoon.eot?je4sez#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?je4sez') format('truetype'),
+    url('fonts/icomoon.woff?je4sez') format('woff'),
+    url('fonts/icomoon.svg?je4sez#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-noun_Branch_2761187:before {
+  content: "\e904";
+}
+.icon-noun_Branch_2316039:before {
+  content: "\e905";
+}
+.icon-noun_Woman_1678288:before {
+  content: "\e907";
+}
+.icon-noun_Couple_2814911:before {
+  content: "\e908";
+}
+.icon-noun_Couple_1292721:before {
+  content: "\e909";
+}
+.icon-noun_Park_3280517:before {
+  content: "\e900";
+}
+.icon-noun_Party_1040881:before {
+  content: "\e901";
+}
+.icon-noun_Bride_1566326:before {
+  content: "\e902";
+}
+.icon-noun_Camera_4362411:before {
+  content: "\e903";
+}
+.icon-noun_Sexy-Woman_710264:before {
+  content: "\e906";
+}
+.icon-Previous:before {
+  content: "\e90b";
+}
+.icon-Next:before {
+  content: "\e90e";
+}
